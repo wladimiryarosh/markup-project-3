@@ -15,6 +15,11 @@
   font-family: RobotoSlab-Regular;
   src:url("../fonts/RobotoSlab-Regular.ttf");
 }
+$mobile-s: 320px;
+$mobile-m: 375px;
+$mobile-l: 425px;
+$tablet: 768px;
+$laptop: 1024px;
 body {
   h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
@@ -349,6 +354,8 @@ body {
               &:hover {
                 background-color: #000;
                 color: #fff;
+                transition: transform .5s;
+                transform: rotate3d(0, 0, 1, 360deg)
               }
             }
             a {
@@ -483,10 +490,11 @@ body {
           font-size: 20px;
           &:hover {
             border: 3px solid #000;
-            padding-top: 8px;
             text-align: center;
             color: #000;
             background-color: #fff;
+            transition: transform .5s;
+            transform: rotate3d(0, 0, 1, 360deg)
           }
         }
       }

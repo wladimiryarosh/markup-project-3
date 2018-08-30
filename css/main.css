@@ -275,7 +275,9 @@ body #team {
             font-size: 20px; }
             body #team .team-section .our-team .team-item .social-link .fab:hover {
               background-color: #000;
-              color: #fff; }
+              color: #fff;
+              transition: transform .5s;
+              transform: rotate3d(0, 0, 1, 360deg); }
           body #team .team-section .our-team .team-item .social-link a {
             color: #000;
             margin-left: 20px; }
@@ -384,7 +386,8 @@ body footer {
         font-size: 20px; }
         body footer .social-link-footer a .fab:hover {
           border: 3px solid #000;
-          padding-top: 8px;
           text-align: center;
           color: #000;
-          background-color: #fff; }
+          background-color: #fff;
+          transition: transform .5s;
+          transform: rotate3d(0, 0, 1, 360deg); }
