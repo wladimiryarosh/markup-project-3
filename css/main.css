@@ -27,6 +27,12 @@ body header {
   height: 800px;
   display: flex;
   flex-direction: column; }
+  @media only screen and (max-width: 670px) {
+    body header {
+      height: 595px; } }
+  @media only screen and (max-width: 320px) {
+    body header {
+      height: 555px; } }
   body header .container {
     width: 90%;
     margin: 0 auto; }
@@ -34,6 +40,9 @@ body header {
     display: flex;
     justify-content: space-between;
     padding-top: 40px; }
+    @media only screen and (max-width: 670px) {
+      body header .heading nav {
+        display: none; } }
     body header .heading nav .menu {
       display: flex; }
       body header .heading nav .menu li {
@@ -50,17 +59,29 @@ body header {
     text-align: center;
     color: #fff;
     padding-top: 150px; }
+    @media only screen and (max-width: 670px) {
+      body header .header-title {
+        padding-top: 100px; } }
     body header .header-title h1 {
       font-size: 40px;
       padding-bottom: 45px;
       font-family: 'DroidSerifItalic', sans-serif;
       font-weight: normal; }
+      @media only screen and (max-width: 320px) {
+        body header .header-title h1 {
+          font-size: 35px; } }
     body header .header-title p {
       font-size: 75px;
       text-transform: uppercase;
       padding-bottom: 50px;
       font-weight: bold;
       font-family: 'Montserrat', sans-serif; }
+      @media only screen and (max-width: 670px) {
+        body header .header-title p {
+          font-size: 50px; } }
+      @media only screen and (max-width: 320px) {
+        body header .header-title p {
+          font-size: 40px; } }
   body header .header-btn {
     background-color: #fed136;
     margin: 0 auto 20px;
@@ -82,6 +103,9 @@ body #services {
   @media only screen and (max-width: 768px) {
     body #services {
       height: 1060px; } }
+  @media only screen and (max-width: 320px) {
+    body #services {
+      height: 1115px; } }
   body #services .services-section {
     display: flex;
     flex-direction: column;
@@ -123,6 +147,9 @@ body #services {
           margin: 30px 0; }
           body #services .our-services .services-item:nth-child(2) {
             margin: 30px 0; } }
+      @media only screen and (max-width: 320px) {
+        body #services .our-services .services-item {
+          width: 290px; } }
       body #services .our-services .services-item h3 {
         margin: 20px 0 15px; }
 
@@ -136,6 +163,9 @@ body #portfolio {
   @media only screen and (max-width: 768px) {
     body #portfolio {
       height: 1220px; } }
+  @media only screen and (max-width: 670px) {
+    body #portfolio {
+      height: 2070px; } }
   body #portfolio .container {
     width: 90%;
     margin: 0 auto; }
@@ -161,6 +191,12 @@ body #portfolio {
       justify-content: space-between;
       flex-wrap: wrap;
       max-width: 1160px; }
+      @media only screen and (max-width: 670px) {
+        body #portfolio .portfolio-section .works {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: nowrap; } }
       body #portfolio .portfolio-section .works .works-item {
         padding: 0 5px 5px 5px; }
 
@@ -172,6 +208,9 @@ body #about-us {
       position: static;
       height: 1700px;
       margin-bottom: 50px; } }
+  @media only screen and (max-width: 320px) {
+    body #about-us {
+      height: 1775px; } }
   body #about-us .about-us-title {
     margin-top: 118px;
     text-align: center; }
@@ -223,6 +262,9 @@ body #about-us {
             align-self: center;
             position: static;
             margin: 0; } }
+      @media only screen and (max-width: 670px) {
+        body #about-us .about-us-time-line .time-line-item {
+          width: 100%; } }
       body #about-us .about-us-time-line .time-line-item .description {
         margin: 0 50px; }
         @media only screen and (max-width: 1024px) {
@@ -289,6 +331,12 @@ body #team {
     body #team {
       padding-top: 40px;
       height: 1530px; } }
+  @media only screen and (max-width: 670px) {
+    body #team {
+      height: 1560px; } }
+  @media only screen and (max-width: 320px) {
+    body #team {
+      height: 1595px; } }
   body #team .team-section {
     display: flex;
     flex-direction: column;
@@ -315,6 +363,9 @@ body #team {
         body #team .team-section .our-team {
           flex-direction: column;
           align-items: center; } }
+      @media only screen and (max-width: 320px) {
+        body #team .team-section .our-team {
+          width: 290px; } }
       body #team .team-section .our-team .team-item {
         display: flex;
         flex-direction: column;
@@ -353,9 +404,16 @@ body #team {
               padding-left: 0; }
     body #team .team-section span {
       margin-bottom: 120px; }
+      @media only screen and (max-width: 670px) {
+        body #team .team-section span {
+          margin: 0; } }
   body #team .container {
     width: 90%;
     margin: 0 auto; }
+
+@media only screen and (max-width: 670px) {
+  body #what-we-use {
+    display: none; } }
 
 body #what-we-use .container {
   width: 90%;
@@ -428,10 +486,14 @@ body #contact-us {
             body #contact-us .contact-us-section form .contact-area .left-area {
               margin-right: 0; } }
           body #contact-us .contact-us-section form .contact-area .left-area input[type="text"] {
-            padding: 20px 300px 20px 25px;
+            padding: 20px;
+            width: 455px;
             border-radius: 4px;
             border: none;
             outline: none; }
+            @media only screen and (max-width: 670px) {
+              body #contact-us .contact-us-section form .contact-area .left-area input[type="text"] {
+                width: 300px; } }
           body #contact-us .contact-us-section form .contact-area .left-area input[type="email"] {
             padding: 20px;
             margin: 25px 0;
@@ -449,7 +511,11 @@ body #contact-us {
           @media only screen and (max-width: 768px) {
             body #contact-us .contact-us-section form .contact-area .right-area textarea {
               margin-top: 25px;
-              width: 492px; } }
+              width: 455px; } }
+          @media only screen and (max-width: 670px) {
+            body #contact-us .contact-us-section form .contact-area .right-area textarea {
+              width: 300px;
+              height: 190px; } }
 
 body footer {
   display: flex;
@@ -457,11 +523,23 @@ body footer {
   align-items: center;
   position: relative;
   height: 90px; }
+  @media only screen and (max-width: 670px) {
+    body footer {
+      flex-direction: column-reverse;
+      justify-content: center;
+      position: static; } }
   body footer .copyright {
     margin-left: 10%; }
+    @media only screen and (max-width: 670px) {
+      body footer .copyright {
+        margin: 0;
+        padding-top: 20px; } }
   body footer .social-link-footer {
     position: absolute;
     left: calc(50% - 115px); }
+    @media only screen and (max-width: 670px) {
+      body footer .social-link-footer {
+        position: static; } }
     body footer .social-link-footer a {
       padding-left: 10px; }
       body footer .social-link-footer a .fab {

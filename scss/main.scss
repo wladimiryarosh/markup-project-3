@@ -30,6 +30,16 @@ $laptop: 1024px;
     @content;
   }
 }
+@mixin mobile-l {
+  @media only screen and (max-width: 670px) {
+    @content;
+  }
+}
+@mixin mobile-s {
+  @media only screen and (max-width: 320px) {
+    @content;
+  }
+}
 body {
   h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
@@ -43,6 +53,12 @@ body {
     height: 800px;
     display: flex;
     flex-direction: column;
+    @include mobile-l {
+      height: 595px;
+    }
+    @include mobile-s {
+      height: 555px;
+    }
     .container {
       width: 90%;
       margin: 0 auto;
@@ -55,7 +71,9 @@ body {
 
       }
       nav {
-
+        @include mobile-l {
+          display: none;
+        }
         .menu {
           display: flex;
           li {
@@ -77,11 +95,17 @@ body {
       text-align: center;
       color: #fff;
       padding-top: 150px;
+      @include mobile-l {
+        padding-top: 100px;
+      }
       h1 {
         font-size: 40px;
         padding-bottom: 45px;
         font-family: 'DroidSerifItalic', sans-serif;
         font-weight: normal;
+        @include mobile-s {
+          font-size: 35px;
+        }
       }
       p {
         font-size: 75px;
@@ -89,6 +113,12 @@ body {
         padding-bottom: 50px;
         font-weight: bold;
         font-family: 'Montserrat', sans-serif;
+        @include mobile-l {
+          font-size: 50px;
+        }
+        @include mobile-s {
+          font-size: 40px;
+        }
       }
     }
     .header-btn {
@@ -113,6 +143,9 @@ body {
     height: 670px;
     @include tablet {
       height: 1060px;
+    }
+    @include mobile-s {
+      height: 1115px;
     }
     .services-section {
       display: flex;
@@ -162,6 +195,9 @@ body {
             margin: 30px 0;
           }
         }
+        @include mobile-s {
+          width: 290px;
+        }
         h3 {
           margin: 20px 0 15px;
         }
@@ -177,6 +213,9 @@ body {
     }
     @include tablet {
       height: 1220px;
+    }
+    @include mobile-l {
+      height: 2070px;
     }
     .container {
       width: 90%;
@@ -207,6 +246,12 @@ body {
         justify-content: space-between;
         flex-wrap: wrap;
         max-width: 1160px;
+        @include mobile-l {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: nowrap;
+        }
         .works-item {
           padding: 0 5px 5px 5px;
         }
@@ -220,6 +265,9 @@ body {
       position: static;
       height: 1700px;
       margin-bottom: 50px;
+    }
+    @include  mobile-s {
+      height: 1775px;
     }
     .about-us-title {
       margin-top: 118px;
@@ -276,6 +324,9 @@ body {
             position: static;
             margin: 0;
           }
+        }
+        @include mobile-l {
+          width: 100%;
         }
         .description {
           margin: 0 50px;
@@ -357,6 +408,12 @@ body {
       padding-top: 40px;
       height: 1530px;
     }
+    @include mobile-l {
+      height: 1560px;
+    }
+    @include mobile-s {
+      height: 1595px;
+    }
     .team-section {
       display: flex;
       flex-direction: column;
@@ -385,6 +442,9 @@ body {
         @include tablet {
           flex-direction: column;
           align-items: center;
+        }
+        @include mobile-s {
+          width: 290px;
         }
         .team-item {
           display: flex;
@@ -437,6 +497,9 @@ body {
       }
       span {
         margin-bottom: 120px;
+        @include mobile-l {
+          margin: 0;
+        }
       }
 
     }
@@ -446,6 +509,9 @@ body {
     }
   }
   #what-we-use {
+    @include mobile-l {
+      display: none;
+    }
     .container {
       width: 90%;
       margin: 0 auto;
@@ -522,10 +588,14 @@ body {
               margin-right: 0;
             }
             input[type="text"] {
-              padding: 20px 300px 20px 25px;
+              padding: 20px;
+              width: 455px;
               border-radius: 4px;
               border: none;
               outline: none;
+              @include mobile-l {
+                width: 300px;
+              }
             }
             input[type="email"] {
               padding: 20px;
@@ -546,7 +616,11 @@ body {
               outline: none;
               @include tablet {
                 margin-top: 25px;
-                width: 492px;
+                width: 455px;
+              }
+              @include mobile-l {
+                width: 300px;
+                height: 190px;
               }
             }
           }
@@ -560,12 +634,24 @@ body {
     align-items: center;
     position: relative;
     height: 90px;
+    @include mobile-l {
+      flex-direction: column-reverse;
+      justify-content: center;
+      position: static;
+    }
     .copyright {
       margin-left: 10%;
+      @include mobile-l {
+        margin: 0;
+        padding-top: 20px;
+      }
     }
     .social-link-footer {
       position: absolute;
       left: calc(50% - 115px);
+      @include mobile-l {
+        position: static;
+      }
       a {
         padding-left: 10px;
         .fab {
