@@ -15,11 +15,6 @@
   font-family: RobotoSlab-Regular;
   src:url("../fonts/RobotoSlab-Regular.ttf");
 }
-$mobile-s: 320px;
-$mobile-m: 375px;
-$mobile-l: 425px;
-$tablet: 768px;
-$laptop: 1024px;
 @mixin laptop {
   @media only screen and (max-width: 1024px) {
     @content;
@@ -509,9 +504,9 @@ body {
     }
   }
   #what-we-use {
-    @include mobile-l {
-      display: none;
-    }
+    //@include mobile-l {
+    //  display: none;
+    //}
     .container {
       width: 90%;
       margin: 0 auto;
@@ -520,7 +515,26 @@ body {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding: 40px 0;
+      padding: 20px 0;
+    }
+    .owl-carousel {
+      max-height: 168px;
+      .owl-stage-outer {
+        max-height: 168px;
+        .owl-stage {
+          max-height: 168px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          .owl-item {
+            padding: 0 20px;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
     }
   }
   #contact-us {
