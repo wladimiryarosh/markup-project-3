@@ -1,6 +1,13 @@
 $(document).ready(function() {
-    $('.menu-btn').on('click', function () {
-        $(this).addClass('active');
+    $('#btn-m-menu-active').on('click', function () {
+        $('#mobile-menu').addClass('active');
+        $('#btn-m-menu-active').addClass('action-open-menu');
+        $('#btn-m-menu-close').addClass('action-close-menu');
+    });
+    $('#btn-m-menu-close').on('click', function () {
+        $('#mobile-menu').removeClass('active');
+        $('#btn-m-menu-close').removeClass('action-close-menu');
+        $('#btn-m-menu-active').removeClass('action-open-menu');
     });
     $('.owl-carousel').owlCarousel({
         loop:true,
